@@ -42,7 +42,7 @@ def instructions():
 # Function displayed after each calculation to request if a user would like to perform more calculations, return to the instructions method, or exit the program.
 def continue_calc(current_program):
     programs = [instructions, sphere_area, sphere_volume, circle_area, distance_between_points]
-    option = input(f"\nWould you like to continue with the {programs[current_program]} program? (y/n/exit): ").lower()
+    option = input(f"\nWould you like to continue with the {programs[current_program].__name__} program? (y/n/exit): ").lower()
     if(option == "y" or option == "yes"):
         programs[current_program]()
     elif(option == "exit" or option == "e"):
